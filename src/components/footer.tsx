@@ -41,7 +41,7 @@ export function Footer() {
               </div>
               <div className="flex items-center">
                 <Mail className="w-4 h-4 mr-3 text-gold" />
-                <span className="text-white/80">contact@promenadesejours.com</span>
+                <span className="text-white/80">promenadesejours@gmail.com</span>
               </div>
             </div>
             
