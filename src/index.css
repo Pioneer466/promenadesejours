@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Clés d'Azur Design System - Luxury Mediterranean Aesthetic */
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --background: 0 0% 100%;
+    --foreground: 213 30% 18%;
+    
+    /* Azure Ocean Palette */
+    --primary: 204 100% 45%; /* Deep azure blue */
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 204 85% 65%; /* Light azure */
+    --primary-dark: 204 100% 25%; /* Deep ocean */
+    
+    /* Luxury Accents */
+    --gold: 45 90% 70%; /* Champagne gold */
+    --gold-light: 45 85% 85%; /* Light gold */
+    --pearl: 210 20% 96%; /* Pearl white */
+    --ocean-deep: 220 45% 15%; /* Deep ocean navy */
+    
+    /* Surface Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 213 30% 18%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 213 30% 18%;
+    
+    /* Interactive States */
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 213 30% 18%;
+    --muted: 210 15% 94%;
+    --muted-foreground: 213 15% 45%;
+    --accent: 204 85% 95%;
+    --accent-foreground: 204 100% 25%;
+    
+    /* Feedback Colors */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    
+    /* Borders & Inputs */
+    --border: 214 20% 88%;
+    --input: 214 20% 88%;
+    --ring: 204 100% 45%;
+    
+    /* Gradients */
+    --gradient-ocean: linear-gradient(135deg, hsl(204 100% 45%), hsl(204 85% 65%));
+    --gradient-sunset: linear-gradient(135deg, hsl(204 85% 65%), hsl(45 90% 70%));
+    --gradient-luxury: linear-gradient(135deg, hsl(0 0% 100%), hsl(210 20% 96%));
+    --gradient-hero: linear-gradient(135deg, hsl(204 100% 25%) 0%, hsl(204 85% 45%) 50%, hsl(45 90% 70%) 100%);
+    
+    /* Shadows */
+    --shadow-luxury: 0 8px 32px hsl(204 100% 25% / 0.15);
+    --shadow-card: 0 4px 24px hsl(213 30% 18% / 0.08);
+    --shadow-gold: 0 4px 20px hsl(45 90% 70% / 0.25);
+    
+    /* Spacing & Layout */
+    --radius: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    
+    /* Animations & Transitions */
+    --transition-luxury: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    /* Keep existing dark mode for accessibility, but focus on light theme for luxury brand */
+    --background: 220 45% 15%;
+    --foreground: 0 0% 95%;
+    --primary: 204 85% 65%;
+    --card: 220 40% 18%;
+    --border: 220 30% 25%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  /* Typography Enhancement */
+  .text-luxury {
+    @apply font-semibold tracking-wide;
+  }
+  
+  .text-hero {
+    @apply text-5xl md:text-7xl font-bold tracking-tight;
+  }
+  
+  .text-subtitle {
+    @apply text-xl md:text-2xl font-light tracking-wide;
+  }
+}
+
+@layer components {
+  /* Luxury Gradient Backgrounds */
+  .bg-gradient-ocean {
+    background: var(--gradient-ocean);
+  }
+  
+  .bg-gradient-sunset {
+    background: var(--gradient-sunset);
+  }
+  
+  .bg-gradient-luxury {
+    background: var(--gradient-luxury);
+  }
+  
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  /* Luxury Shadows */
+  .shadow-luxury {
+    box-shadow: var(--shadow-luxury);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+  
+  /* Glass Effect */
+  .glass-card {
+    @apply backdrop-blur-md bg-white/80 border border-white/20 shadow-luxury;
+  }
+  
+  /* Luxury Hover Effects */
+  .hover-luxury {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-luxury;
+  }
+  
+  .hover-gold {
+    @apply transition-all duration-300 hover:shadow-gold;
+  }
+}
