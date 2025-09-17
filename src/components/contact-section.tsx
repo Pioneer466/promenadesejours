@@ -37,7 +37,7 @@ Message: ${formData.message}
     `.trim();
 
     // Créer le lien mailto
-    const mailtoLink = `mailto:contact@promenadesejours.com?subject=Demande d'étude personnalisée - ${formData.name}&body=${encodeURIComponent(emailBody)}`;
+    const mailtoLink = `mailto:promenadesejours@gmail.com?subject=Demande d'étude personnalisée - ${formData.name}&body=${encodeURIComponent(emailBody)}`;
     
     // Ouvrir le client email
     window.location.href = mailtoLink;
@@ -62,7 +62,7 @@ Message: ${formData.message}
     {
       icon: Mail,
       title: "Email",
-      info: "contact@promenadesejours.com",
+      info: "promenadesejours@gmail.com",
       subInfo: "Réponse sous 2h ouvrées"
     },
     {
